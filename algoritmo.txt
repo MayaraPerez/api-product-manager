@@ -1,0 +1,45 @@
+Estrutura de diretorios
+
+- cmd
+   |_ main.go - arquivo que inicializa o projeto
+
+- rotas
+    |_ rotas.go - local que concentra as rotas que iremos consumir
+
+- controller
+    |_ product_controller.go -  camada mais externa que lida diretamente com as requisicões http 
+                                instancia o model.product 
+                                pega o id que vem como string e converte o id para int verifica se contem erro ao converter 
+                                verifica se nao e uma string vazia
+                                caso tenha retorna http.statusBadRequest, http.statusNotFound, http.statusInternalServerError
+                                chama o user case e passa como parametro o usecase
+
+- useCase
+    |_ product_useCase.go -  camada que recebe o ID ou PRODUTO que veio do controller e passa para o repository como parametro
+                             no usercase tratamos possivel erro ao chamar o repository retornando uma lista vazia e um erro
+                             vincula o que veio do banco com o formato que queremos receber seguindo model.product
+
+- repository
+    |_ product_repository.go -  camada que lida diretamente com querys que faz as consultas ao banco de dados 
+                                criamos as query trata um possivel erro 
+
+-db
+  |_ connection_db - Local que estabelecemos a conecão com banco de dados
+
+
+- model
+    |_ product.go  - camada mais interna onde se concentra toda a regra de negocio
+    |_ response.go
+
+
+DETALHES INPORTANTES:
+
+- lib gin gonic do golang
+- banco de dados postgres / mysql
+- usar postman para testar o consumo das rotas
+
+- colocar a aplicacao e o banco de dados para rodar em um container docker.
+- teste unitarios mais distribuidos nas funcs e metodos da aplicacao.
+- testes integracao testantos componentes.
+- token JWT  
+
