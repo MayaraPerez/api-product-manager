@@ -1,2 +1,3 @@
 # api-product-manager
-Este é um projeto  é uma API RESTful desenvolvida em Go, integrada a um banco de dados relacional (PostgreSQL ) tanto a aplicação e o banco de dados são executados em containers  Docker
+Projeto de uma API RESTful desenvolvida em Go, integrada a um banco de dados relacional (PostgreSQL)<br> 
+Tanto a aplicação e o banco de dados são executados em containers Docker.
