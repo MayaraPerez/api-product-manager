@@ -29,43 +29,37 @@ both the application and the database are executed in Docker containers.
 ├── .env.example              # Example of environment variables
 └── go.mod                    # Project dependencies
 
-## Tecnologias Usadas 
-
-- Linguagem de programação: Go
-- Framework para rotas: Gin Gonic
-- Banco de dados: PostgreSQL ou MySQL
-- Gerenciamento de containers: Docker e Docker Compose
-- Autenticação: JWT (EM ANDAMENTO)
 ```
 
+## Technologies Used
 
-# Pré-requisitos
+- Programming language: Go
+- Routing framework: Gin Gonic
+- Database: PostgreSQL or MySQL
+- Container management: Docker and Docker Compose
+- Authentication: JWT (IN PROGRESS)
 
-Certifique-se de ter as seguintes ferramentas instaladas no seu ambiente de desenvolvimento:
+##  Installing dependencies:
+After cloning, enter the project directory and install the necessary dependencies. Install Go dependencies: If you don't have Go installed Download the project dependencies: Inside the project directory, run:
 
 - Docker e Docker Compose
 - Git
 - [Go](https://go.dev/doc/install) 1.20
 
 
-## Installing dependencies:
-Após a clonagem, entre no diretório do projeto e instale as dependências necessárias. Instale as dependências do Go: Se você não tiver o Go instalado Baixe as dependências do projeto: Dentro do diretório do projeto, execute:
+## Running the project:
 
-Go 1.20
-Rodando o projeto:
+Clone this repository:
 
-Clone este repositório:
-
-Clone este repositório:
 ````
 git clone https://github.com/MayaraPerez/api-product-manager.git
 ````
-Navegue até o diretório do projeto:
+Navigate to the project directory:
 ````
 cd api-ProdManager
 ````
 
-Execute o programa:
+Run the program:
 ````
 go run cmd/main.go
 ````
