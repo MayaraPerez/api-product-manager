@@ -13,7 +13,7 @@ const (
 	port = 5432
 	user = "postgres"
 	password = "@mayaraPerez1992"
-	host = "go_db"
+	host = "localhost"
 )
 
 func ConnectDB() (*sql.DB, error) {
