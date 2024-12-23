@@ -39,7 +39,7 @@ both the application and the database are executed in Docker containers.
 ```
 
 
-## Pré-requisitos
+# Pré-requisitos
 
 Certifique-se de ter as seguintes ferramentas instaladas no seu ambiente de desenvolvimento:
 
