@@ -8,26 +8,32 @@ both the application and the database are executed in Docker containers.
 
 ## Project Structure
 ```
-│ └── main.go                 # Initialize the server and configure API routing
+├── cmd/
+│ ├── .env                     # Environment variables file for local configuration
+│ ├── init.go                  # Initial server configuration (dependencies, middlewares)
+│ └── main.go                  # Initialize the server and configure API routing
 ├── config/
-│ └── config.go               # Configurations and management
-├── routes/
-│ └── routes.go               # Define the application's routes
+│ └── config.go                # Configuration management (e.g., loading .env, global variables)
 ├── controller/
-│ └── product_controller.go   # Handle HTTP requests and basic validations
-├── useCase/
-│ └── product_useCase.go      # Process data and apply business rules
-├── repository/
-│ └── product_repository.go   # Query and manipulate data in the database data
+│ └── product_controller.go    # Handle HTTP requests and perform basic validations
 ├── db/
-│ └── connection_db.go        # Configure the database connection
+│ └── connection_db.go         # Configure the connection to the database data
 ├── model/
-│ ├── product.go              # Define the product structure
-│ └── response.go             # Define response structures
-├── Dockerfile                # Define the container environment
-├── docker-compose.yml        # Configure the application and database in Docker
-├── .env.example              # Example of environment variables
-└── go.mod                    # Project dependencies
+│ ├── product.go               # Defines the product structure
+│ └── response.go              # Defines response structures (e.g., error messages, success)
+├── repository/
+│ └── product_repository.go    # Performs database operations (CRUD)
+├── routes/
+│ └── routes.go                # Defines the application routes
+├── useCase/
+│ └── product_useCase.go       # Contains business logic (rules and data processing)
+├── .gitignore                 # File to ignore files in Git (e.g., .env, binaries)
+├── algo.txt                   # Notes or algorithms used in the project
+├── docker-compose.yml         # Docker environment configuration (API and database)
+├── Dockerfile                 # Defines the container environment for the application
+├── go.mod                     # Go dependency management
+├── go.sum                     # Checksums of Go dependencies
+└── init.sql                   # Script to initialize the database
 
 ```
 
