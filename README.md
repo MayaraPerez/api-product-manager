@@ -42,7 +42,7 @@ both the application and the database are executed in Docker containers.
 - Programming language: Go
 - Routing framework: Gin Gonic
 - Database: PostgreSQL or MySQL
-- Container management: Docker and Docker Compose
+- Container management: Docker and Docker Compose (IN PROGRESS)
 - Authentication: JWT (IN PROGRESS)
 
 ##  Installing dependencies:
