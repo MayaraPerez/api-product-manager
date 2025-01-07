@@ -62,7 +62,7 @@ func (p *ProductController) GetProductById(ctx *gin.Context) {
 	productId, err := strconv.Atoi(id)
 	if err != nil {
 		response := model.Response{
-			Message: "Id do produto precisa ser um numero",
+			Message: "Id do produto precisa ser um numero valido",
 		}
 		ctx.JSON(http.StatusBadRequest, response)
 		return
@@ -122,7 +122,6 @@ func (pc *ProductController) UpdateProduct(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, product)
 
 }
-
 func (pc *ProductController) DeleteProduct(ctx *gin.Context) {
 	id_product := ctx.Param("product_id")
 
