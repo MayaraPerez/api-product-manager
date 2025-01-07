@@ -1,0 +1,6 @@
+# ignore env file
+.env
+
+# Ignorar arquivos do editor
+.vscode/
+.DS_Store
